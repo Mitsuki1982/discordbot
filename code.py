@@ -2,10 +2,6 @@ import discord
 from discord import activity
 from discord.ext import commands
 
-import os
-from dotenv import load_dotenv
-load_dotenv()
-
 import time
 import random as rnd
 import string
@@ -70,4 +66,4 @@ async def on_message(message):
             else:
                 await message.channel.send('Wait a moment before the next command')
 
-bot.run(os.getenv('TOKEN'))
+bot.run('ODg3NDEzMTc3OTI1NjY0ODYw.YUDx7A.6kD57I5sP2wiZPmEiL8eQTINZD4')
