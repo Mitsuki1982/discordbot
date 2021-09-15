@@ -24,14 +24,15 @@ async def on_message(message):
     global delay
 
     if message.author != bot:
+
+        if message.content == '<@!887413177925664860>':
+            await message.channel.send('My prefix is "!"')
+
         if message.content.startswith(bot.command_prefix):
 
             if delay + 3 <= round(time.time()):
 
-                if message.content == '<@!887413177925664860>':
-                    await message.channel.send('My prefix "!"')
-
-                elif message.content == bot.command_prefix + 'psc':
+                if message.content == bot.command_prefix + 'psc':
                     psc_code = rnd.randint(int("1"*15), int("9"*15))
                     author = message.author
 
@@ -66,4 +67,4 @@ async def on_message(message):
             else:
                 await message.channel.send('Wait a moment before the next command')
 
-bot.run('ODg3NDEzMTc3OTI1NjY0ODYw.YUDx7A.6kD57I5sP2wiZPmEiL8eQTINZD4')
+bot.run(open('token.txt').read())
